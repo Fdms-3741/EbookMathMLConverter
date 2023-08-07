@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 def ConvertMathElements(fp):
     missedCount = 0 
     
-    soup = BeautifulSoup(fp)
+    soup = BeautifulSoup(fp,features='lxml')
 
     # Finds all equations
     for pElement in soup.find_all('math'):
